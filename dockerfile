@@ -6,7 +6,7 @@ WORKDIR /app
 RUN pip install --upgrade pip
 COPY requirements.txt .
 
-RUN pip intall -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Fase 02 - builder
 FROM python:3.11-slim
