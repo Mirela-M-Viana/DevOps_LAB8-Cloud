@@ -14,7 +14,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Criar um usuario não-root para segurança
-RUN addgroup --system appgroup && adduser --ingroup appuser
+RUN addgroup --system appgroup && adduser --ingroup appgroup appuser
 
 # Copiando a instalação do python
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
